@@ -1,0 +1,63 @@
+'scopeName': 'source.use'
+'name': 'Use'
+'fileTypes': [
+	'use'
+	'useocl'
+]
+'patterns': [
+  {
+    'match': '\\b(model)\\b'
+    'name': 'keyword.other.model.use'
+  }
+  {
+    'include': '#code'
+  }
+]
+'repository':
+	'class':
+		'patterns': [
+			{
+				'include': '#comments-inline'
+			}
+			{
+				'match': '\\b(class|end)\\b'
+				'name': 'storage.type.class.use'
+			}
+		]
+	'class-definition':
+		'patterns': [
+			{
+				'match': '\\b(operations|attributes|statemachines)\\b'
+				'name': 'storage.modifier.use'
+			}
+		]
+	'code':
+		'patterns': [
+			{
+				'include': '#comments'
+			}
+			{
+				'include': '#class'
+			}
+			{
+				'include': '#class-definition'
+			}
+		]
+	'comments-inline':
+		'patterns': [
+			{
+				'begin': '--'
+				'beginCaptures':
+					'0':
+						'name': 'punctuation.definition.comment.use'
+				'end': '\\n'
+				'name': 'comment.line.double-dash.use'
+			}
+		]
+	'primitive-types':
+		'patterns': [
+			{
+				'match': '\\b(?:Boolean|Integer|String)\\b'
+				'name': 'storage.type.primitive.use'
+			}
+		]

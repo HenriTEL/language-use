@@ -1,0 +1,14 @@
+{
+  "name": "language-use",
+  "main": "./lib/language-use",
+  "version": "0.1.0",
+  "description": "Use language support in Atom",
+  "engines": {
+    "atom": "*"
+  },
+  "activationCommands": {
+    "atom-workspace": "language-use:toggle"
+  },
+  "repository": "https://github.com/atom/language-use",
+  "license": "MIT"
+}
