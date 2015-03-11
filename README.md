@@ -1,6 +1,6 @@
 # language-use package
 
-Adds syntax highlighting to Use file in Atom.
+Implements syntax highlighting to Use file in Atom.
 Use files are mix of OCL (Object Constraint Language), SOIL (Simple OCL-based Imperative
 Language) and more.
 
